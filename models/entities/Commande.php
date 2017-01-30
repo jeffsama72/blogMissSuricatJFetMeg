@@ -56,3 +56,4 @@ abstract class Commande
 	public function setLibelle($libelle) {
 		$this->libelle = $libelle;
 	}
+}
