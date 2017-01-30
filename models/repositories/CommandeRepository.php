@@ -27,10 +27,10 @@ class CommandeRepository
 
 			$commande = new Commande();
 			$commande->setIdClient($obj->client_id);
+			$commande->setIdCommande($obj->c.id);
 			$commande->setRef($obj->ref);
 			$commande->setDateCommande($obj->date_cmd);
 			$commande->setDateExpedition($obj->date_expedition);
-			$commande->setIdCommande($obj->c.id);
 			$commande->setLibelle($obj->libelle);
 
 			$listeCommande[] = $commande;
