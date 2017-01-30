@@ -1,6 +1,6 @@
 <?php
 
-abstract class Commande
+class Commande
 {
 	protected $idClient;
 	protected $idCommande;
@@ -56,3 +56,5 @@ abstract class Commande
 	public function setLibelle($libelle) {
 		$this->libelle = $libelle;
 	}
+}
+?>
