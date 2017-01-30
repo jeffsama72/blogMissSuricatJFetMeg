@@ -1,6 +1,6 @@
 <?php
 
-abstract class Commande
+class Commande
 {
 	protected $idClient;
 	protected $idCommande;
