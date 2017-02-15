@@ -48,9 +48,4 @@ class User
 	public function setPassword($password) {
 		$this->password = $password;
 	}
-
-
-
-
-
 }

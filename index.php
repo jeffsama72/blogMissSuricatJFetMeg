@@ -6,6 +6,8 @@ include_once('models/entities/Personne.php');
 include_once('models/entities/Client.php');
 include_once('models/entities/User.php');
 include_once('models/entities/Commande.php');
+include_once('models/entities/Produit.php');
+include_once('models/repositories/ProduitRepository.php');
 include_once('models/repositories/ClientRepository.php');
 include_once('models/repositories/UserRepository.php');
 include_once('models/repositories/CommandeRepository.php');
@@ -62,6 +64,13 @@ switch ($action) {
 		$clientRepo = new CommandeRepository();
 		$listeCommande = $clientRepo->getAll($pdo);
 		$vueAAfficher = "views/listCommande.php";
+		break;
+
+	case "listProduit":
+		//On prépare la vue a afficher avec les données dont elle a besoin
+		$produitRepo = new ProduitRepository();
+		$listeProduit = $produitRepo->getAll($pdo);
+		$vueAAfficher = "views/listProduit.php";
 		break;
 
 	//Affiche le formulaire d'ajout d'un client
@@ -141,6 +150,7 @@ switch ($action) {
 			$vueAAfficher = "views/listClient.php";
 			break;
 		}
+		
 }
 
 include_once("layouts/layout.php");
